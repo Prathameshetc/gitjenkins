@@ -1,0 +1,37 @@
+pipeline{
+    agent any
+        stages{
+            stage("Git Build"){
+                steps{
+                    echo "It is building"
+                }
+            }
+			 stage("Test"){
+                steps{
+                    echo "It is testing"
+                }
+            }
+			 stage("Deploy"){
+                steps{
+                    echo "It is deployment status"
+                }
+            }
+			
+            }
+            
+        }   
+}
+
+
+
+
+
+
+node {
+    stage("Build"){
+        echo "Building"
+    }
+    stage("Test"){
+        echo "Testing"
+    }
+}
